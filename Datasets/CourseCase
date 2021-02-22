@@ -1,0 +1,61 @@
+#Text1: Simple BPMN (Exercise 3.12)
+After a claim is received, it is registered by a claims officer who then writes a settlement recommendation. This recommendation is then checked by a senior claims officer who may mark the claim as “OK” or “not OK”. If the claim is marked as “not OK”, it is sent back to the claims officer and the recommendation is repeated. If the claim is “OK”, the claim handling proceeds
+
+#Text2: multi-instance activity
+After a car accident, a statement is sought from the witnesses that were present, in order to lodge the insurance claim. As soon as the first two statements are received, the claim can be lodged to the insurance company without waiting for the other statements.
+
+#Text3: ad-hoc sub-process
+A typical army selection process starts by shortlisting all candidates’ applications. Those shortlisted are then called to sit the following tests: drug and alcohol, eye, color vision, hearing, blood, urine, weight, fingerprinting and doctor examination. The color vision can only be done after the eye test, while the doctor examination can only be done after color vision, hearing, blood, urine and weight have been tested. Moreover, it may be required for some candidates to repeat some of these tests multiple times in order to get a correct assessment, e.g. the blood test may need be repeated if the candidate has taken too much sugar in the previous 24 hours. The candidates that pass all tests are asked to sit a mental exam and a physical exam, followed by an interview. Only those that also pass these two exams and perform well in the interview can be recruited in the army.
+
+#Text4: event-based decision
+In the context of a claim handling process, it is sometimes necessary to send a questionnaire to the claimant to gather additional information. The claimant is expected to return the questionnaire within five days. If no response is received after five days, a reminder is sent to the claimant. If after another five days there is still no response, another reminder is sent and so on until the completed questionnaire is received.
+
+#Text5: non-interrupting boundary events
+A Purchase Order (PO) handling process starts when a PO is received. The PO is first registered. If the current date is not a working day, the process waits until the following working day before proceeding. Otherwise, an availability check is performed and a “PO response” is sent back to the customer.
+Anytime after the PO has been registered, the customer may send a “PO change request”. When such a PO change request is received, any processing related to the PO must be stopped. The PO change request is then registered. Thereafter, the process proceeds as it would do after a normal PO is registered.
+Further, if the customer sends a “PO cancelation request” after the PO registration, the PO processing must be stopped and the chance request needs to be handled.
+The customer may send a “Customer address change request” after the PO registration. When such a request is received, it is just registered, without further action
+
+#Text6: KU Leuven admission Procedure
+In order to apply for admission, candidates fill in an online application form by a fixed deadline (the deadline is the same for all applicants). Online applications are recorded in an information system to which all staff members involved in the admissions process have access. Prior to submitting the online form, the applicant must upload electronic copies of the following documents: (i) a motivation letter; (ii) certified copies of previous degrees and academic transcripts; (iii) copy of identity document; (iv) copy of English language test results. Applicants can view and track the status of their application via the online application system.
+Once an applicant has submitted the online application, a PDF document is automatically generated based on the application data. The applicant is requested to download this document, sign it, and send it by post together with the certified copies of previous degree and academic transcripts. All documents are assumed to be authentic and valid. Documents take on average 10 days to reach KU Leuven by post. KU Leuven waits at most 4 weeks for the hard copy of a given application to arrive (together with accompanying certified copies). Otherwise the application is disqualified.
+Four weeks after the submission deadline, incomplete applications are discarded and the admissions officer reads the motivation letters and assigns a score to it. The complete applications are then forwarded to the Intelligent Admission Application system.
+The system converts the grade point average (GPA) to a standard GPA score based on a GPA conversion table. Based on the collected information, the Intelligent Admission Application System classifies the candidates into inacceptable, medium or top candidates. Top candidates have a converted GPA of 4.5 or more and a motivation letter score of 8 or more. Candidates with a GPA of less than 4 or a motivation letter score less than 6 are not acceptable. All other candidates are considered medium. Only top candidates can receive a scholarship. Acceptable candidates receive a preference score depending on GPA and letter score. Currently the score is calculated as 2*GPA + letter_score. The ranking is automated. After the ranking run, the system produces the list of acceptable candidates according to their preference score and with the indication of scholarship (Y/N).
+Each year, KU Leuven receives in total 4000 online applications. Applicants compete for 3000 study places. There is no limit on the number of scholarships.
+Immediately after the ranking, the admission office sends the corresponding notifications to the candidates with the highest scores. It is assumed that all candidates will take their place.
+
+#Text7: Quit or not quit
+If I don't get a raise of at least 10 percent, I will find a job somewhere else. But if I get promoted, then i will expect my own office or I'll quit, unless the work is going to be more interesting; in which case, I'll stay with just a 10 percent raise.
+
+#Text8: Reimbursement of expenses
+After the Expense Report is received, a new account must be created if the employee does not already have one
+the report is then reviewed for automatic approval. Amounts under $200 are automatically approved. Amounts equal to or over $200 require approval of the supervisor
+In case of rejection, the employee must receive a rejection notice by email. The reimbursement goes to the employee’s direct deposit bank account. If no final action has happened in 7 days, then the employee must receive
+an approval in progress email. If the request is not finished within 30 days, then the process is stopped and the employee receives an email cancellation notice and must re-submit the expense report 
+
+#Text9: Request approval - Four eyes Principle
+For a request (e.g., a payment) two approvals of two different people are needed. A Process Engine should ensure that both approvals are fulfilled before the request is approved. This is done in two stages: the approval of the second person is only requested if the approval of the first person has been obtained.
+
+#Text10: Teaching a class
+Teaching a class consists of two sessions interrupted by a break.  I start teaching the class at 8:30 AM. The break starts at 9:25 and takes 10 minutes. My class stops at 10:30 AM sharp and then I go back to my office.
+
+#Text11: Complaints Handling.
+Each year, travel agency Y receives about 10.000 complaints.  There is a special department for handling these complaints, but the logistics department intervenes as well in the process.
+A clerk at the logistics department registers incoming complaints.  After registration, a form is sent to the customer to request more details.  This is done by a clerk of the complaints department. Either the customer sends in the filled form within two weeks, or (s)he doesn't. When a form is received, it is processed to produce a report. In case no form is received, an empty report is created, which does however not imply that the complaint is dismissed without further treatment. In parallel with the request for more details, the complaint is evaluated by the manager of the complaints department. If (s)he judges no further treatment is required, the process ends. If (s)he decides further treatment is required, the clerk of the complaints department will handle the complaint, using the produced reports. 
+The manager will check the handling of the complaint. If (s)he deems the proposed actions to be OK, then the problem is solved. If not, the clerk has to handle the complaint again, until a satisfying solution is proposed.
+
+#Text12: Processing a set of orders from a marketplace.
+A company receives orders from a marketplace. Every 10 minutes, the orders from the marketplace are collected in a batch. Every order in this batch needs to be validated. If the data is correct, the order is imported into the ERP System, what finishes the processing of the order. The validations of the orders collected in one batch is done in parallel.
+
+#Text13: Exercise 6: Quote for a trip.
+When a customer requests a quote, a travel agent must create a quote of all the services the customer included in the request (Flight, hotel, and/or car rental). When completed, a travel plan is built and the quote is sent. If the customer is interested in the plan, a travel plan delivery process starts and after that the whole process finishes; if after waiting a certain time (2 weeks) no response is received from the customer, the process finishes.
+
+#Text14: Two Step Escalation
+When we want a pizza, we order one. Sometimes the pizza delivery screws up and the delivery takes longer than 30 minutes. Then we complain to the delivery service. After that, we give them another 20 minutes to deliver the pizza. If they do not make it in time, we give up and cancel our order.
+
+#Text15: Offering legal service:
+The customers can ask for legal advice whenever they need it. The lawyer provides the requested advice and puts the billable hours on the customer's time sheet. 
+When the month is over, the lawyer's accountant determines the billable hours based on the time sheet and creates the invoice. If the invoice is payed on time, the process finishes, but if after 14 days the customer has not payed the invoice yet, a reminder for the payment is sent, procedure that repeats every 14 days until the money is received.
+
+
+
